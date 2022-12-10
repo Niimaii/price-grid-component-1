@@ -1,0 +1,171 @@
+/* ///// General Formatting ///// */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.price {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 24rem 24rem;
+  grid-template-rows: 16rem 18rem;
+  grid-template-areas:
+    "top top"
+    "btmLeft btmRight";
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: lightgray;
+  font-family: Karla, sans-serif;
+}
+
+.top {
+  /* Format */
+  grid-area: top;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+
+  /* General Styling */
+  padding: 3rem;
+}
+
+.btmLeft {
+  /* Format */
+  grid-area: btmLeft;
+  background-color: #2f9c95;
+  border-radius: 0 0 0 8px;
+
+  /* General Styling */
+  padding: 3rem;
+}
+
+.btmRight {
+  /* Format */
+  grid-area: btmRight;
+  background-color: #00a9a5;
+  border-radius: 0 0 8px 0;
+
+  /* General Styling */
+  padding: 3rem;
+}
+
+/* ///// General Styling ///// */
+
+h1 {
+  color: #00a9a5;
+  margin-top: 0;
+}
+
+h2 {
+  color: #b5e48c;
+}
+
+p {
+  color: #adb5bd;
+}
+
+h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Top */
+
+.top h1 {
+  padding-bottom: 2rem;
+}
+
+.top h2 {
+  padding-bottom: 1rem;
+}
+
+.top p {
+  line-height: 1.5rem;
+}
+
+/* Bottom Left */
+
+.btmLeftNum {
+  font-size: 2rem;
+}
+
+.btmLeft p {
+  color: white;
+}
+
+.btmLeftBtn {
+  background-color: #98df26;
+  color: white;
+  border: none;
+  padding: 1rem 7rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+
+.btmLeftBtn:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+}
+
+.btmLeftPrice {
+  padding-bottom: 10px;
+}
+
+/* Bottom Right */
+
+.btmRight p {
+  color: white;
+  text-align: left;
+  line-height: 22px;
+  font-weight: 300;
+  word-spacing: 0.1rem;
+}
+
+/* ///// Mobile ///// */
+
+@media only screen and (max-width: 550px) {
+  .price {
+    grid-template-columns: 24rem;
+    grid-template-rows: 17rem 17rem 17rem;
+    grid-template-areas:
+      "top"
+      "btmLeft"
+      "btmRight";
+    margin-top: 2rem;
+  }
+
+  /* Top */
+  .top p {
+    font-size: 0.85rem;
+  }
+
+  .top h2 {
+    font-size: 1.3rem;
+  }
+
+  .top h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Mid */
+
+  .btmLeft {
+    border-radius: 0;
+  }
+
+  /* Bottom */
+  .btmRight {
+    border-radius: 0 0 8px 8px;
+  }
+}
